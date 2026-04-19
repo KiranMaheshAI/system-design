@@ -64,11 +64,6 @@ class Document:
         self.elements.append(element)
     def get_elements(self) -> list[DocumentElement]:
         return self.elements
-    def render(self) -> str:
-        result = ""
-        for element in self.elements:
-            result += element.render()
-        return result
 
 class DocumentRenderer:
     def __init__(self, document: Document):

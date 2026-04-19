@@ -150,7 +150,7 @@ class Van(Vehicle):
 # ─────────────────────────────────────────────
 
 class Ticket:
-    def __init__(self, vehicle: Vehicle, slot: "ParkingSlot"):
+    def __init__(self, vehicle: Vehicle, slot: ParkingSlot):
         self.ticket_id   = str(uuid.uuid4())[:8].upper()
         self.vehicle     = vehicle
         self.slot        = slot
@@ -268,7 +268,7 @@ class ParkingFloor:
 # ─────────────────────────────────────────────
 
 class EntrancePanel:
-    def __init__(self, panel_id: str, parking_lot: "ParkingLot"):
+    def __init__(self, panel_id: str, parking_lot: ParkingLot):
         self.panel_id   = panel_id
         self.parking_lot = parking_lot
 
@@ -277,7 +277,7 @@ class EntrancePanel:
 
 
 class ExitPanel:
-    def __init__(self, panel_id: str, parking_lot: "ParkingLot",
+    def __init__(self, panel_id: str, parking_lot: ParkingLot,
                  rate: ParkingRate, payment_method: PaymentMethod):
         self.panel_id       = panel_id
         self.parking_lot    = parking_lot
